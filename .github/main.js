@@ -23,40 +23,33 @@ window.addEventListener("keydown", (e) => {
 
   if (e.code === "ArrowRight") {
     currentPosition = div.getBoundingClientRect().left;
-    if (
-      div.getBoundingClientRect().right <= main.getBoundingClientRect().right
-    ) {
-      console.log(
-        div.getBoundingClientRect().createElement,
-        document.body.getBoundingClientRect().right
-      );
-      currentPosition += 10;
+    currentPosition += 20;
+    if (div.getBoundingClientRect().right <= main.getBoundingClientRect().right)
       div.style.left = currentPosition + "px";
-    }
   }
 
   if (e.code === "ArrowDown") {
     currentPosition = div.getBoundingClientRect().top;
+    currentPosition += 20;
     if (
       div.getBoundingClientRect().bottom < main.getBoundingClientRect().bottom
     ) {
-      currentPosition += 10;
       div.style.top = currentPosition + "px";
     }
   }
 
   if (e.code === "ArrowLeft") {
     currentPosition = div.getBoundingClientRect().left;
+    currentPosition -= 20;
     if (div.getBoundingClientRect().left > main.getBoundingClientRect().left) {
-      currentPosition -= 10;
       div.style.left = currentPosition + "px";
     }
   }
 
   if (e.code === "ArrowUp") {
     currentPosition = div.getBoundingClientRect().top;
+    currentPosition -= 20;
     if (div.getBoundingClientRect().top > main.getBoundingClientRect().top)
-      currentPosition -= 10;
-    div.style.top = currentPosition + "px";
+      div.style.top = currentPosition + "px";
   }
 });
