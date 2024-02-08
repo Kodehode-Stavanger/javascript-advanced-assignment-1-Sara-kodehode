@@ -22,10 +22,9 @@ window.addEventListener("keydown", (e) => {
   let currentPosition;
 
   if (e.code === "ArrowRight") {
-    currentPosition = div.getBoundingClientRect().left || 0;
+    currentPosition = div.getBoundingClientRect().left;
     if (
-      div.getBoundingClientRect().right <=
-      document.body.getBoundingClientRect().right
+      div.getBoundingClientRect().right <= main.getBoundingClientRect().right
     ) {
       console.log(
         div.getBoundingClientRect().createElement,
@@ -37,7 +36,7 @@ window.addEventListener("keydown", (e) => {
   }
 
   if (e.code === "ArrowDown") {
-    currentPosition = div.getBoundingClientRect().top || 0;
+    currentPosition = div.getBoundingClientRect().top;
     if (
       div.getBoundingClientRect().bottom < main.getBoundingClientRect().bottom
     ) {
@@ -47,7 +46,7 @@ window.addEventListener("keydown", (e) => {
   }
 
   if (e.code === "ArrowLeft") {
-    currentPosition = div.getBoundingClientRect().left || 0;
+    currentPosition = div.getBoundingClientRect().left;
     if (div.getBoundingClientRect().left > main.getBoundingClientRect().left) {
       currentPosition -= 10;
       div.style.left = currentPosition + "px";
@@ -55,7 +54,7 @@ window.addEventListener("keydown", (e) => {
   }
 
   if (e.code === "ArrowUp") {
-    currentPosition = div.getBoundingClientRect().top || 0;
+    currentPosition = div.getBoundingClientRect().top;
     if (div.getBoundingClientRect().top > main.getBoundingClientRect().top)
       currentPosition -= 10;
     div.style.top = currentPosition + "px";
