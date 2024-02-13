@@ -1,6 +1,6 @@
 const main = document.createElement("main");
-main.style.width = "1600px";
-main.style.height = "700px";
+main.style.width = "1200px";
+main.style.height = "600px";
 main.id = "main";
 document.body.append(main);
 
