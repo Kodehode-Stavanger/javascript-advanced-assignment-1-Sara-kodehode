@@ -16,8 +16,11 @@ div.style.transition = "0.2 ease-in-out";
 document.body.append(div);
 
 main.addEventListener("click", (e) => {
-  div.style.left = e.clientX + "px";
-  div.style.top = e.clientY + "px";
+  const divWidth = parseFloat(getComputedStyle(div).width);
+  const divHeight = parseFloat(getComputedStyle(div).height);
+
+  div.style.left = e.clientX - divWidth / 2 + "px";
+  div.style.top = e.clientY - divHeight / 2 + "px";
 });
 
 window.addEventListener("keydown", (e) => {
