@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+main {
+  background-image: url(space.jpg);
+  background-size: cover;
+}
+
+div {
+  background-image: url(astronaut.png);
+  background-size: cover;
+}
