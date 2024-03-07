@@ -6,12 +6,12 @@ main.id = "main";
 document.body.append(main);
 
 const div = document.createElement("div");
-div.style.width = "50px";
-div.style.height = "50px";
+div.style.width = "100px";
+div.style.height = "100px";
 div.style.position = "absolute";
 div.style.top = main.getBoundingClientRect.top / 2 + "px";
 div.style.left = main.getBoundingClientRect.right / 2 + "px";
-div.style.backgroundColor = "blue";
+
 div.style.transition = "0.2 ease-in-out";
 document.body.append(div);
 

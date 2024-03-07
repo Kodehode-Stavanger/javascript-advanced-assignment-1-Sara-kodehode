@@ -5,6 +5,12 @@ body {
   background-color: black;
 }
 
-#main {
-  background-color: blanchedalmond;
+main {
+  background-image: url(space.jpg);
+  background-size: cover;
+}
+
+div {
+  background-image: url(astronaut.png);
+  background-size: cover;
 }
